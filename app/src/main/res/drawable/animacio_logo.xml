@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!-- A "android:oneshot", establim que l'animació NO es reproodueixi un sol cop -->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <!-- Als "android:drawable", establim l'arxiu que es reproduirà i a "android:duration" n'establim
+     la duració en ms -->
+    <item
+        android:drawable="@drawable/simpsons_0"
+        android:duration="30" />
+    <item
+        android:drawable="@drawable/simpsons_1"
+        android:duration="30" />
+    <item
+        android:drawable="@drawable/simpsons_2"
+        android:duration="30" />
+
+</animation-list>
