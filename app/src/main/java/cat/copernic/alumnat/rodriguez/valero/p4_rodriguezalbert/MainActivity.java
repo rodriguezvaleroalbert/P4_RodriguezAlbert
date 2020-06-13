@@ -1,7 +1,10 @@
 package cat.copernic.alumnat.rodriguez.valero.p4_rodriguezalbert;
 
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -9,7 +12,13 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.IOException;
+import java.net.URI;
+
 public class MainActivity extends AppCompatActivity {
+
+    Boolean mReproduint = false;
+    MediaPlayer mPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +80,25 @@ public class MainActivity extends AppCompatActivity {
                     //S'inicia l'animació de l'Ull
                     ull.startAnimation(animacioUll);
                 }
+            }
+        });
+        //Declarem el MediaPlayer amb la cançó
+        mPlayer = MediaPlayer.create(this, R.raw.the_simpsons);
+        //Establim la ruta del fitxer de so
+        /* Quan es piqui sobre el donut, si s'està reproduïnt l'audio s'aturarà, en cas qcontrari
+         * s'iniciarà la reproducció. */
+        donut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mReproduint) {
+                    //Atura reproducció
+                    mPlayer.pause();
+                } else {
+                    //Iniciem la reproducció
+                    mPlayer.start();
+                }
+                //Canvia l'estat
+                mReproduint = !mReproduint;
             }
         });
     }
