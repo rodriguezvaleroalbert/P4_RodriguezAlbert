@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         final Animation animacioBlau = AnimationUtils.loadAnimation(this, R.anim.animacio_blau);
         final Animation animacioVerd = AnimationUtils.loadAnimation(this, R.anim.animacio_verd);
         final Animation animacioDonut = AnimationUtils.loadAnimation(this, R.anim.anim_donut);
+        final Animation animacioUll = AnimationUtils.loadAnimation(this, R.anim.anim_ull);
         /* Quan l'usuari cliqui el logo, si els engranatges, el donut i l'ull NO són visibles
          * es tornen visibles, si ja són visibles, es tornen invisibles */
         logoSimpsons.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     engranatgeVerd.clearAnimation();
                     //S'atura l'animació del donut
                     donut.clearAnimation();
+                    //S'atura l'animació de l'ull
+                    ull.clearAnimation();
                     engranatgeVermell.setVisibility(View.INVISIBLE);
                     engranatgeBlau.setVisibility(View.INVISIBLE);
                     engranatgeVerd.setVisibility(View.INVISIBLE);
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     engranatgeVerd.startAnimation(animacioVerd);
                     //S'inicia l'animació del Donut
                     donut.startAnimation(animacioDonut);
+                    //S'inicia l'animació de l'Ull
+                    ull.startAnimation(animacioUll);
                 }
             }
         });
