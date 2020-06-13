@@ -2,4 +2,9 @@
     <string name="app_name">P4_RodriguezAlbert</string>
     <string name="explicacio_logo_Simpsons">Una animació del logo dels Simpsons</string>
     <string name="explicacio_cap_Homer">Cap del Homer Simpson</string>
+    <string name="engranatge_blau">engranatge_blau</string>
+    <string name="engranatge_verd">engranatge verd</string>
+    <string name="engranatge_vermell">engranatge vermell</string>
+    <string name="donut">donut</string>
+    <string name="ull">ull</string>
 </resources>
